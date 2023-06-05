@@ -13,7 +13,7 @@ router.get ('/as',async (req,res )=>{
         css:'home'})
 })
 
-router.get('/products', async (req,res) =>{
+router.get('/products', privacy('PRIVATED'),async (req,res) =>{
   const {page=1} = req.query;
   const {limit=10} = req.query
   const {sort} = req.query
